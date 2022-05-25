@@ -197,6 +197,7 @@ img {
   border-style: none;
   overflow: hidden;
   overflow-x: hidden;
+  object-fit: cover;
 }
 
 svg {
@@ -11719,3 +11720,4 @@ pre .code {
 .tech-icon{
   height:30px;
 }
+
