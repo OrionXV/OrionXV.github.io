@@ -53,11 +53,22 @@ exclude:
   - legacy/assets/scss
 
 collections:
+  articles:
+    output: true
+    permalink: /articles/:path/
   portfolio:
     output: true
     permalink: /projects/:path/
 
 defaults:
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: article
+      author_profile: true
+      share: false
+      comments: false
   - scope:
       path: "_pages"
     values:

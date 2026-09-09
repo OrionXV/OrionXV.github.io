@@ -1,0 +1,20 @@
+---
+title: Articles
+permalink: /articles/
+description: "Articles and writing by Syed Arsalaan Nadim."
+---
+{% assign articles = site.articles | where_exp: 'article', 'article.published != false' | sort: 'date' | reverse %}
+{% if articles.size > 0 %}
+<div class="article-list">
+  {% for article in articles %}
+  <article class="article-entry">
+    {% if article.date %}<p class="article-meta"><time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%B %-d, %Y" }}</time></p>{% endif %}
+    <h2><a href="{{ article.url | relative_url }}">{{ article.title | escape }}</a></h2>
+    {% assign summary = article.summary | default: article.excerpt %}
+    {% if summary %}<p class="article-summary">{{ summary | markdownify | strip_html | truncatewords: 45 | escape_once }}</p>{% endif %}
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<p class="articles-empty">No articles published yet.</p>
+{% endif %}

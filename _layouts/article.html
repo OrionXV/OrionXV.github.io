@@ -1,0 +1,13 @@
+---
+layout: single
+---
+<div class="article-body">
+  {{ content }}
+</div>
+{% assign publication_date = page.date | default: site.time %}
+{% assign publication_year = publication_date | date: '%Y' %}
+<footer class="article-copyright">
+  <p>© {{ page.copyright_year | default: publication_year }} {{ site.name }}. All rights reserved.</p>
+  <a href="{{ '/copyright/' | relative_url }}">Copyright &amp; permissions</a>
+</footer>
+<p class="back-link"><a href="{{ '/articles/' | relative_url }}">← All articles</a></p>

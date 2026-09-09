@@ -5,6 +5,8 @@ main:
     url: /research/
   - title: Projects
     url: /projects/
+  - title: Articles
+    url: /articles/
   - title: Experience
     url: /experience/
   - title: CV
