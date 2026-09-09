@@ -1,0 +1,13 @@
+<div class="profile" itemscope itemtype="https://schema.org/Person">
+  <div class="author__content">
+    <h2 class="author__name" itemprop="name">Syed Arsalaan<br> Nadim</h2>
+    <p class="author__bio">{{ site.author.bio }}<br><span class="profile-institution">{{ site.author.employer }}</span></p>
+    <p class="profile-location">{{ site.author.location }}</p>
+  </div>
+  <ul class="profile-links" id="contact" aria-label="Contact and profiles">
+    <li><a href="mailto:{{ site.author.email }}"><span aria-hidden="true">✉</span> Email</a></li>
+    <li><a href="https://github.com/{{ site.author.github }}"><span aria-hidden="true">↗</span> GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/"><span aria-hidden="true">↗</span> LinkedIn</a></li>
+  </ul>
+  <p class="profile-note">Sequential decision-making.<br>Causality. Agentic systems.</p>
+</div>

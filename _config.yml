@@ -1,0 +1,97 @@
+locale: en-US
+site_theme: default
+title: Syed Arsalaan Nadim
+title_separator: "·"
+name: Syed Arsalaan Nadim
+description: "Sequential decision-making, causality, and agentic systems. MSc student in Statistics and Data Science at MBZUAI."
+url: "https://orionxv.github.io"
+baseurl: ""
+repository: "OrionXV/OrionXV.github.io"
+timezone: Asia/Dubai
+
+author:
+  name: Syed Arsalaan Nadim
+  bio: "MSc · Statistics & Data Science"
+  employer: MBZUAI
+  location: Abu Dhabi, UAE
+  email: Syed.Nadim@mbzuai.ac.ae
+  github: OrionXV
+  linkedin: syed-arsalaan-nadim-5247ba225
+
+social:
+  type: Person
+  name: Syed Arsalaan Nadim
+  links:
+    - https://github.com/OrionXV
+    - https://www.linkedin.com/in/syed-arsalaan-nadim-5247ba225/
+
+breadcrumbs: false
+future: true
+atom_feed:
+  hide: true
+comments:
+  provider: false
+analytics:
+  provider: false
+
+include:
+  - _pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - UPSTREAM.md
+  - ASSET-NOTES.md
+  - tests
+  - .bundle
+  - vendor
+  - node_modules
+  - assets/js/_main.js
+  - assets/js/plugins
+  - images/sunset-street.png
+  - legacy/assets/scss
+
+collections:
+  portfolio:
+    output: true
+    permalink: /projects/:path/
+
+defaults:
+  - scope:
+      path: "_pages"
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      comments: false
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: project
+      author_profile: true
+      share: false
+      comments: false
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+sass:
+  sass_dir: _sass
+  style: compressed
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
+compress_html:
+  clippings: all
+  ignore:
+    envs: development

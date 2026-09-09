@@ -1,0 +1,16 @@
+---
+title: Experience
+permalink: /experience/
+description: "Research and work at GenBio AI, Aalto University, MBZUAI, ONGC Videsh, and EzyGen."
+---
+{% for entry in site.data.experience %}
+<section class="experience-entry" id="{{ entry.id }}" aria-labelledby="{{ entry.id }}-title">
+  <div class="experience-heading">
+    <h2 id="{{ entry.id }}-title">{{ entry.organization }}</h2>
+    <p class="experience-period">{{ entry.period }}</p>
+  </div>
+  <p class="experience-role">{{ entry.role }}</p>
+  {% for paragraph in entry.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+  {% if entry.link %}<p class="project-actions"><a href="{{ entry.link }}">{{ entry.link_label }} <span aria-hidden="true">↗</span></a></p>{% endif %}
+</section>
+{% endfor %}

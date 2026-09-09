@@ -1,0 +1,11 @@
+<article class="project-row">
+  <a class="project-thumb" href="{{ project.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ project.image | relative_url }}" alt="" width="300" height="200" loading="lazy">
+  </a>
+  <div>
+    <p class="project-meta">{{ project.metadata }}</p>
+    <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+    <p>{{ project.summary }}</p>
+    <p class="project-actions"><a href="{{ project.project_url }}">View project <span aria-hidden="true">↗</span></a>{% if project.report_url %}<a href="{{ project.report_url }}">Report &amp; notes <span aria-hidden="true">↗</span></a>{% endif %}</p>
+  </div>
+</article>

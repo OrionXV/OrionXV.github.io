@@ -1,0 +1,21 @@
+---
+title: Projects
+permalink: /projects/
+description: "Research experiments, machine-learning competitions, and software projects by Syed Arsalaan Nadim."
+---
+<nav class="section-jump" aria-label="Project categories">
+  {% for group in site.data.project_groups %}
+  <a href="#{{ group.id }}">{{ group.title }}</a>
+  {% endfor %}
+</nav>
+{% assign ordered_projects = site.portfolio | sort: 'order' %}
+{% for group in site.data.project_groups %}
+<section aria-labelledby="{{ group.id }}">
+  <h2 id="{{ group.id }}">{{ group.title }}</h2>
+  {% for project in ordered_projects %}
+  {% if project.group == group.id %}
+  {% include project-row.html %}
+  {% endif %}
+  {% endfor %}
+</section>
+{% endfor %}

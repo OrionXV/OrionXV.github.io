@@ -1,0 +1,13 @@
+---
+layout: single
+---
+<p class="project-detail-meta">{{ page.metadata }}</p>
+<figure class="project-figure">
+  <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}" width="600" height="380">
+</figure>
+{{ content }}
+<p class="project-actions">
+  <a href="{{ page.project_url }}">View project <span aria-hidden="true">↗</span></a>
+  {% if page.report_url %}<a href="{{ page.report_url }}">Technical report &amp; notes <span aria-hidden="true">↗</span></a>{% endif %}
+</p>
+<p class="back-link"><a href="{{ '/projects/' | relative_url }}">← All projects</a></p>
