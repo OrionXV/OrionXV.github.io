@@ -1,3 +1,16 @@
+- id: mbzuai
+  organization: MBZUAI
+  role: MSc Research · Statistics & Data Science · Abu Dhabi, UAE
+  period: August 2025 – Present
+  paragraphs:
+    - Graph diffusion models and molecule generation with Prof. Jian Kang.
+    - Bayesian optimization and multi-objective black-box optimization with Prof. Raúl Astudillo.
+- id: aalto
+  organization: Aalto University
+  role: Research Assistant · Espoo, Finland
+  period: June 2026 – August 2026
+  paragraphs:
+    - Worked on generative UI and Bayesian optimization to model user preferences.
 - id: genbio
   organization: GenBio AI
   role: Research Engineer Intern · Virtual Cell Harness
@@ -6,19 +19,6 @@
     - Worked on optimization skills and TTA strategies for Virtual Cell Harness and its agent workflows.
   link: https://genbio.ai/harnessing-ai-to-build-virtual-cells-vcharness/
   link_label: About Virtual Cell Harness
-- id: aalto
-  organization: Aalto University
-  role: Research Assistant · Espoo, Finland
-  period: June 2026 – August 2026
-  paragraphs:
-    - Worked on generative UI and Bayesian optimization to model user preferences.
-- id: mbzuai
-  organization: MBZUAI
-  role: MSc Research · Statistics & Data Science · Abu Dhabi, UAE
-  period: August 2025 – Present
-  paragraphs:
-    - Graph diffusion models and molecule generation with Prof. Jian Kang.
-    - Bayesian optimization and multi-objective black-box optimization with Prof. Raúl Astudillo.
 - id: ongc
   organization: ONGC Videsh
   role: Petroleum Engineer · Technical Support & Research
