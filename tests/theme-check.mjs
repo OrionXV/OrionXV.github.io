@@ -62,6 +62,9 @@ assert.equal(browser('unknown-theme').beforeRuntime, 'sunset');
 const compressedPage = browser('disco', false, startup.replace(/\s+/g, ' '));
 assert.equal(compressedPage.beforeRuntime, 'disco', 'Compressed HTML must still restore the saved theme');
 assert.equal(compressedPage.attributes.get('aria-checked'), 'true');
+const cachedPage = browser('disco', false, '// A cached inline initializer was swallowed by a line comment.');
+assert.equal(cachedPage.documentRoot.dataset.appearance, 'disco', 'The main script must recover the saved theme if inline initialization is skipped');
+assert.equal(cachedPage.attributes.get('aria-checked'), 'true');
 
 if (process.argv.includes('--built')) {
   for (const path of ['index.html', 'research/index.html', 'projects/index.html', 'articles/index.html', 'experience/index.html', 'cv/index.html']) {

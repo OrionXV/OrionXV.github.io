@@ -19,7 +19,14 @@
     }
   };
 
-  applyTheme(root.dataset.appearance);
+  let initialTheme = root.dataset.appearance;
+  try {
+    const savedTheme = localStorage.getItem('arsalaan-theme');
+    if (savedTheme === 'disco' || savedTheme === 'sunset') initialTheme = savedTheme;
+  } catch (_) {
+    // Retain the early page setting when storage is unavailable.
+  }
+  applyTheme(initialTheme);
   button.hidden = false;
   button.addEventListener('click', () => applyTheme(root.dataset.appearance === 'disco' ? 'sunset' : 'disco', true));
   window.addEventListener('storage', (event) => {
