@@ -5,7 +5,6 @@ section[id], #genbio { scroll-margin-top: 110px; }
 .hero-name { color: #b9c8d3; font-size: 1.15rem; margin-bottom: 24px; }
 .research-hero h1 { max-width: 900px; font-size: clamp(2.8rem, 6.8vw, 5.8rem); line-height: 1.05; letter-spacing: -.035em; font-weight: 600; margin-bottom: 24px; }
 .hero-interests { font-size: 1.2rem; color: #e0e8ec; margin-bottom: 14px; }
-.hero-intro { max-width: 620px; font-size: 1.05rem; line-height: 1.6; color: #b9c8d3; }
 .hero-links { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; margin-top: 28px; }
 .hero-links a { display: inline-flex; align-items: center; min-height: 44px; }
 .header .infos { position: relative; height: auto; gap: 24px; padding-bottom: 30px; }
