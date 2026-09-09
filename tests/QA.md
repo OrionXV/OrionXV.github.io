@@ -3,6 +3,7 @@
 ## Build and content
 
 - Jekyll 3.10 safe-mode build succeeds.
+- A clean archive of the committed files also builds. The first publishing attempt exposed an overly broad ignore rule; it is now anchored to the root dependency directory, and regression checks require all theme and legacy files to be tracked.
 - `node tests/site-check.mjs` verifies all 199 legacy pages/assets against the previous commit using Git's line-ending normalization.
 - All 22 projects remain in their chosen order. Their descriptions and links are unchanged, except the website project now describes the Academic Pages migration.
 - All 32 generated HTML pages and their local links, fragments, and assets are checked.

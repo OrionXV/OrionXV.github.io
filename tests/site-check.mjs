@@ -12,6 +12,10 @@ const walk = dir => readdirSync(dir, { withFileTypes: true }).flatMap(e =>
   e.isDirectory() ? walk(join(dir, e.name)) : [join(dir, e.name)]);
 
 assert.ok(existsSync(join(output, 'index.html')), 'Build Jekyll before running checks.');
+const tracked = new Set(execFileSync('git', ['ls-files', '-z'], { cwd: root, encoding: 'utf8' }).split('\0'));
+for (const file of walk(join(root, '_sass'))) {
+  assert.ok(tracked.has(relative(root, file)), `Theme dependency is not tracked: ${file}`);
+}
 
 // Compare using the same line-ending normalization as the original Git paths.
 const oldFiles = execFileSync('git', ['ls-tree', '-r', baseline], { cwd: root, encoding: 'utf8' })
@@ -20,6 +24,7 @@ const oldFiles = execFileSync('git', ['ls-tree', '-r', baseline], { cwd: root, e
     return { path, hash: meta.split(' ')[2] };
   }).filter(f => f.path.startsWith('assets/') || ['index.html', 'image-credits.html'].includes(f.path));
 for (const file of oldFiles) {
+  assert.ok(tracked.has('legacy/' + file.path), `Legacy file is not tracked: ${file.path}`);
   const hash = execFileSync('git', ['hash-object', '--path=' + file.path, 'legacy/' + file.path], { cwd: root, encoding: 'utf8' }).trim();
   assert.equal(hash, file.hash, `Legacy file changed: ${file.path}`);
 }
