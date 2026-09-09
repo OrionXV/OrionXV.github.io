@@ -57,10 +57,12 @@ Open http://127.0.0.1:4000. Jekyll must build the site; opening source files dir
 ## Verify
 
 ```sh
-bundle exec jekyll build --safe
+JEKYLL_ENV=production bundle exec jekyll build --safe
 node tests/site-check.mjs
-node tests/theme-check.mjs
+node tests/theme-check.mjs --built
 bundle exec ruby tests/articles-check.rb
 ```
 
 GitHub Pages builds from `main` at the repository root. See `UPSTREAM.md` for the Academic Pages source and `ASSET-NOTES.md` for banner provenance.
+
+Use the production build for verification: it compresses inline scripts, unlike the development preview. The theme checks exercise the compressed initialization on every main page.

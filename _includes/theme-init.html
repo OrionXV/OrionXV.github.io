@@ -1,11 +1,11 @@
 <script>
-  // Restore the selected palette before the page is painted.
+  /* Use block comments here: production HTML compression removes line breaks. */
   (() => {
     let theme = 'sunset';
     try {
       if (localStorage.getItem('arsalaan-theme') === 'disco') theme = 'disco';
     } catch (_) {
-      // The switch still works when browser storage is unavailable.
+      /* The switch still works when browser storage is unavailable. */
     }
     document.documentElement.dataset.appearance = theme;
   })();
