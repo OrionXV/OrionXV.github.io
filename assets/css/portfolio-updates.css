@@ -1,0 +1,20 @@
+/* Additions to the existing portfolio theme. */
+section[id] { scroll-margin-top: 110px; }
+.project-card { display: block; color: inherit; }
+.project-card > a { color: inherit; }
+.project-image { display: block; width: 100%; height: 200px; object-fit: cover; border-radius: 6px; }
+.project-image.plot-image { object-fit: contain; padding: 12px; background: #fff; }
+.project-image.technology-image { object-fit: contain; padding: 36px; background: #092e20; }
+.project-summary { font-size: .88rem; line-height: 1.6; color: #abb8c4; margin-top: .75rem; }
+.project-paper { display: inline-block; padding: .25rem 0; color: #66fcf1 !important; font-size: .88rem; }
+.project-card:focus-visible, .project-card a:focus-visible { outline: 2px solid #66fcf1; outline-offset: 5px; }
+.experience-role { color: #66fcf1; margin-bottom: .75rem; }
+.experience-date { color: #a9b7c3; font-size: .9rem; margin-bottom: 0; }
+.institution-mark { display: flex; align-items: center; justify-content: center; background: #fff; padding: 24px; border-radius: 6px; }
+.institution-mark img { width: 100%; object-fit: contain; }
+#owl-portfolio .owl-stage { display: flex; align-items: flex-start; }
+#owl-portfolio .owl-nav { display: flex; justify-content: center; gap: 12px; }
+#owl-portfolio .owl-nav button { min-width: 44px; min-height: 44px; border: 1px solid #45a29e; border-radius: 50%; color: #66fcf1; font-size: 1.5rem; }
+#owl-portfolio .owl-nav button:hover, #owl-portfolio .owl-nav button:focus-visible { background: #45a29e; color: #0b0c10; }
+.image-credits { margin-top: 1rem; font-size: .8rem; }
+@media (max-width: 600px) { .project-card { margin: 0 20px; } .institution-mark { min-height: 140px; } }

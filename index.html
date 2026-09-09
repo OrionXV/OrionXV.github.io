@@ -20,6 +20,7 @@
 
     <!-- Bootstrap + Ollie main styles -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/portfolio-updates.css">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -74,7 +75,6 @@
                 <h6 class="subtitle font-weight-normal">I am currently a</h6>
                 <h5>M.Sc. student (Statistics & Data Science) at MBZUAI</h5>
                 <p class="font-small">Probabilistic ML • Bayesian Optimization • Reinforcement Learning • LLMs/Agents • Time-Series Modeling</p>
-                <p class="font-small">Site under maintainance. Some things might break. Will fix later.</p>
             </div>
             <div class="socials text-right">
                 <div class="row justify-content-between">
@@ -106,6 +106,9 @@
                         More broadly, I’m interested in <strong>probabilistic machine learning</strong>, <strong>reinforcement learning</strong>,
                         <strong>LLMs / agentic systems</strong>, and <strong>time-series modeling</strong> for scientific and healthcare applications.
                         <br><br>
+                        In 2026, I also worked on <strong>generative user interfaces</strong> at <strong>Aalto University</strong>, Espoo,
+                        through the <strong>Aalto Science Institute (AScI)</strong> research programme.
+                        <br><br>
                         Previously, I worked at <strong>ONGC Videsh Ltd.</strong> (June 2024 – June 2025) in Technical Support & Research, where I built
                         Python pipelines for large-scale production time-series, designed forecasting and scenario analyses for decision-making,
                         and shipped an internal <strong>Django dashboard</strong> with ML-based forecasts and anomaly flags.
@@ -135,7 +138,7 @@
                     <div class="widget" style="background-color:#1F2833;">
                         <div class="icon-wrapper"><i class="ti-package"></i></div>
                         <div class="infos-wrapper">
-                            <h6 class="text-primary">10+ Projects</h6>
+                            <h6 class="text-primary">20+ Projects</h6>
                             <p>ML/LLMs • NLP • CV • Web development and more.</p>
                         </div>
                     </div>
@@ -262,7 +265,7 @@
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mt-4 mt-md-0">
                     <a href="https://www.djangoproject.com/" class="icon-box border-0 text-left">
-                        <img class="tech-icon" src="assets/imgs/django.png" alt="">
+                        <img class="tech-icon" src="assets/imgs/django.svg" alt="Django">
                         <h6 class="text-left">&ensp; Django</h6>
                     </a>
                 </div>
@@ -287,6 +290,26 @@
             <h6 class="xs-font mb-0">On my professional life</h6>
             <h3 class="section-title mb-5">Experience</h3>
 
+            <div class="blog-wrapper">
+                <div class="img-wrapper institution-mark"><img src="assets/imgs/aalto.svg" alt="Aalto University logo" loading="lazy"></div>
+                <div class="txt-wrapper">
+                    <h4 class="blog-title">Aalto University</h4>
+                    <p class="experience-role">AScI Research Project · Espoo, Finland</p>
+                    <p>Worked on human-centered AI and generative user interfaces through the Aalto Science Institute's 2026 research programme, connecting machine learning with interactive tools for interface design.</p>
+                    <p class="experience-date">2026</p>
+                </div>
+            </div>
+            <hr>
+            <div class="blog-wrapper">
+                <div class="img-wrapper institution-mark"><img src="assets/imgs/mbzuai.png" alt="MBZUAI logo" loading="lazy"></div>
+                <div class="txt-wrapper">
+                    <h4 class="blog-title">Mohamed bin Zayed University of Artificial Intelligence</h4>
+                    <p class="experience-role">M.Sc. Research · Statistics &amp; Data Science · Abu Dhabi, UAE</p>
+                    <p>Research in Bayesian optimization and probabilistic machine learning under the supervision of Prof. Raúl Astudillo and Prof. Jian Kang. My work explores optimization with generative models and efficient Knowledge Gradient acquisition functions for sample-limited, high-dimensional problems.</p>
+                    <p class="experience-date">August 2025 – Present</p>
+                </div>
+            </div>
+            <hr>
             <!-- ONGC Videsh Experience -->
             <div class="blog-wrapper">
                 <div class="img-wrapper"><img src="assets/imgs/ovl.jpg" alt="ONGC Videsh Ltd"></div>
@@ -332,11 +355,62 @@
 
     <section class="section" id="projects">
         <div class="container">
-            <h6 class="xs-font mb-0">Some of my work, <b>slide to see them all!</b></h6>
+            <h6 class="xs-font mb-0">Research, software, competitions, and side projects — use the arrows or swipe to explore.</h6>
             <h3 class="section-title pb-4">My Projects</h3>
         </div>
 
         <div id="owl-portfolio" class="owl-carousel owl-theme mt-4">
+            <article class="item expertises-item project-card">
+                <a href="https://github.com/OrionXV/interventional_tgmm" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/imgs/tgmm.svg" alt="Clustering visualization from the interventional TGMM experiments" class="box-shadow project-image plot-image" width="300" height="200" loading="lazy">
+                    <h6 class="mt-3 mb-2">Interventional Robustness of a Learned GMM Solver</h6>
+                </a>
+                <p class="xs-font">Exploratory Research · 2026</p>
+                <p class="project-summary">Evaluating a transformer-based mixture solver under controlled distribution shifts on held-out Wine, Iris, and Digits benchmarks.</p>
+                <a class="project-paper" href="https://github.com/OrionXV/interventional_tgmm/tree/main/paper" target="_blank" rel="noopener noreferrer">Technical report &amp; notes <span aria-hidden="true">↗</span></a>
+            </article>
+            <a href="https://github.com/Kamik423/Padbury-Clock-Revived" class="item expertises-item project-card" target="_blank" rel="noopener noreferrer">
+                <img src="assets/imgs/padbury.png" alt="Padbury Clock Revived macOS screensaver" class="box-shadow project-image" width="300" height="200" loading="lazy">
+                <h6 class="mt-3 mb-2">Padbury Clock Revived</h6>
+                <p class="xs-font">Open-source Contributions · Swift · 2026</p>
+                <p class="project-summary">Contributed macOS compatibility updates and a customizable footer to the upstream screensaver project.</p>
+            </a>
+            <a href="https://github.com/OrionXV/AI7101-Project" class="item expertises-item project-card" target="_blank" rel="noopener noreferrer">
+                <img src="assets/imgs/water-pump.png" alt="Hand-pump diagram from the Pump It Up competition" class="box-shadow project-image plot-image" width="300" height="200" loading="lazy">
+                <h6 class="mt-3 mb-2">Pump It Up: Water-pump Functionality</h6>
+                <p class="xs-font">Team Project · Applied Machine Learning · 2025</p>
+                <p class="project-summary">Predicting water-pump functionality in Tanzania through data cleaning, feature engineering, and classification.</p>
+            </a>
+            <a href="https://github.com/OrionXV/IssueTracker" class="item expertises-item project-card" target="_blank" rel="noopener noreferrer">
+                <img src="assets/imgs/django.svg" alt="Django, the framework used for IssueTracker" class="box-shadow project-image technology-image" width="300" height="200" loading="lazy">
+                <h6 class="mt-3 mb-2">Asset &amp; Issue Tracker</h6>
+                <p class="xs-font">Web Application · Django · 2024</p>
+                <p class="project-summary">An application for tracking assets, issues, and progress updates, with filtering and Excel exports.</p>
+            </a>
+            <a href="https://github.com/OrionXV/Janatahack-Healthcare-Analytics-II" class="item expertises-item project-card" target="_blank" rel="noopener noreferrer">
+                <img src="assets/imgs/healthcare.jpg" alt="Hospital corridor illustrating the healthcare analytics project" class="box-shadow project-image" width="300" height="200" loading="lazy">
+                <h6 class="mt-3 mb-2">Hospital Length-of-Stay Prediction</h6>
+                <p class="xs-font">Healthcare Analytics II · 2022</p>
+                <p class="project-summary">Classifying hospital length of stay using feature preprocessing, CatBoost, and cross-validation.</p>
+            </a>
+            <a href="https://github.com/OrionXV/ReinfoLearn" class="item expertises-item project-card" target="_blank" rel="noopener noreferrer">
+                <img src="assets/imgs/q-learning.png" alt="Greedy-policy success-rate plot from the Q-learning project" class="box-shadow project-image plot-image" width="300" height="200" loading="lazy">
+                <h6 class="mt-3 mb-2">Gridworld Q-learning</h6>
+                <p class="xs-font">Reinforcement Learning · 2026</p>
+                <p class="project-summary">Tabular Q-learning in procedurally generated grid environments, with policy evaluation and learning curves.</p>
+            </a>
+            <a href="https://github.com/OrionXV/MoreYrden" class="item expertises-item project-card" target="_blank" rel="noopener noreferrer">
+                <img src="assets/imgs/more-yrden.png" alt="Illustration of violet magical traps inspired by the MoreYrden mod; not a gameplay screenshot" class="box-shadow project-image" width="300" height="200" loading="lazy">
+                <h6 class="mt-3 mb-2">MoreYrden — The Witcher 3 Mod</h6>
+                <p class="xs-font">Game Modding · Witcher Script · 2025</p>
+                <p class="project-summary">A gameplay modification that increases the number of active Yrden traps Geralt can cast.</p>
+            </a>
+            <a href="https://github.com/OrionXV/AIinProcess" class="item expertises-item project-card" target="_blank" rel="noopener noreferrer">
+                <img src="assets/imgs/scipy.png" alt="SciPy, a scientific-computing library used in the optimization coursework" class="box-shadow project-image plot-image" width="300" height="200" loading="lazy">
+                <h6 class="mt-3 mb-2">Optimization Algorithms in Practice</h6>
+                <p class="xs-font">Coursework · Scientific Computing · 2023</p>
+                <p class="project-summary">Explorations of genetic algorithms, particle swarm optimization, and simulated annealing.</p>
+            </a>
              <a href="https://github.com/jsunn-y/SGPO" class="item expertises-item" target="_blank">
                 <img src="assets/imgs/sgpo.png" alt="" class="box-shadow" height="200" width="300">
                 <h6 class="mt-3 mb-2">Steered Generation for Protein Optimization (SGPO)</h6>
@@ -361,7 +435,7 @@
             <a href="https://www.kaggle.com/competitions/vesuvius-challenge-ink-detection/leaderboard" class="item expertises-item" target="_blank">
                 <img src="assets/imgs/vesuvius.png" alt="" class="box-shadow" height="200" width="300">
                 <h6 class="mt-3 mb-2">Vesuvius Challenge – Ink Detection</h6>
-                <p class="xs-font">Top 20% • 2023</p>
+                <p class="xs-font">Top 16% • Rank 189 • 2023</p>
             </a>
 
             <a href="https://github.com/OrionXV/Volve-Well-Log-Prediction" class="item expertises-item" target="_blank">
@@ -586,6 +660,7 @@
                             <a class="d-block subtitle" href="mailto:Syed.Nadim@mbzuai.ac.ae"><i class="ti-email pr-2"></i> Syed.Nadim@mbzuai.ac.ae</a>
                             <a class="d-block subtitle" href="https://www.linkedin.com/in/syed-arsalaan-nadim-5247ba225/" target="_blank"><i class="ti-linkedin pr-1"></i> LinkedIn</a>
                             <a class="d-block subtitle" href="https://orionxv.github.io/" target="_blank"><i class="ti-world pr-1"></i> Website</a>
+                            <a class="d-block image-credits" href="image-credits.html">Image credits</a>
                         </div>
                     </div>
                 </div>
