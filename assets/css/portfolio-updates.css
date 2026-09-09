@@ -1,5 +1,5 @@
 /* Additions to the existing portfolio theme. */
-section[id], #genbio { scroll-margin-top: 110px; }
+section[id], #genbio, #research-focus-title { scroll-margin-top: 110px; }
 .header { height: auto; min-height: 760px; }
 .research-hero { position: relative; flex: 1; padding-top: 160px; padding-bottom: 70px; }
 .hero-name { color: #b9c8d3; font-size: 1.15rem; margin-bottom: 24px; }
@@ -10,7 +10,7 @@ section[id], #genbio { scroll-margin-top: 110px; }
 .header .infos { position: relative; height: auto; gap: 24px; padding-bottom: 30px; }
 .research-focus { margin-top: 60px; }
 .research-focus > h4 { margin-bottom: 24px; }
-.focus-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+.focus-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 .focus-item { border-top: 1px solid #45a29e; padding-top: 22px; }
 .focus-item h5 { font-size: 1.1rem; line-height: 1.4; }
 .focus-item p { font-size: .95rem; line-height: 1.65; color: #b9c8d3; }
@@ -35,7 +35,6 @@ section[id], #genbio { scroll-margin-top: 110px; }
 #owl-portfolio .owl-nav button { min-width: 44px; min-height: 44px; border: 1px solid #45a29e; border-radius: 50%; color: #66fcf1; font-size: 1.5rem; }
 #owl-portfolio .owl-nav button:hover, #owl-portfolio .owl-nav button:focus-visible { background: #45a29e; color: #0b0c10; }
 .image-credits { margin-top: 1rem; font-size: .8rem; }
-@media (max-width: 1000px) { .focus-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 767px) {
     .header { min-height: 0; padding: 125px 0 30px; }
     .research-hero { padding-top: 0; padding-bottom: 35px; }
