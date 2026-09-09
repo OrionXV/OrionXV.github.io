@@ -1,0 +1,12 @@
+<script>
+  // Restore the selected palette before the page is painted.
+  (() => {
+    let theme = 'sunset';
+    try {
+      if (localStorage.getItem('arsalaan-theme') === 'disco') theme = 'disco';
+    } catch (_) {
+      // The switch still works when browser storage is unavailable.
+    }
+    document.documentElement.dataset.appearance = theme;
+  })();
+</script>

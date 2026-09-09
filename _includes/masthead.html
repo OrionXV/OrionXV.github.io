@@ -1,7 +1,6 @@
 <div class="masthead">
   <div class="masthead__inner-wrap sunset-nav">
     <a class="site-name" href="{{ '/' | relative_url }}"><span class="sun-mark" aria-hidden="true"></span>Arsalaan</a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-links">Menu <span aria-hidden="true">☰</span></button>
     <nav aria-label="Main navigation" id="site-links">
       <ul class="site-links">
         {% for link in site.data.navigation.main %}
@@ -13,5 +12,13 @@
         {% endfor %}
       </ul>
     </nav>
+    <div class="header-controls">
+      <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Disco theme" title="Switch to Disco theme" hidden>
+        <span class="fa-solid fa-cube" aria-hidden="true"></span>
+        <span>Disco</span>
+        <span class="theme-track" aria-hidden="true"></span>
+      </button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-links">Menu <span aria-hidden="true">☰</span></button>
+    </div>
   </div>
 </div>

@@ -9,6 +9,8 @@ This site is built on [Academic Pages](https://github.com/academicpages/academic
 
 The sunset banner is an original AI-generated illustration made with OpenAI image generation, using a user-supplied image as a visual reference. It does not depict a real location.
 
+The Disco theme's harbour banner is an original illustration made with OpenAI image generation, inspired by the painterly, isometric environments of *Disco Elysium*. It is not a game screenshot, and no game assets are included.
+
 Project images are carried over from the [previous portfolio]({{ '/legacy/image-credits.html' | relative_url }}), where the source credits are preserved.
 
 - **Interventional TGMM:** clustering visualization from the project’s held-out Iris experiments.

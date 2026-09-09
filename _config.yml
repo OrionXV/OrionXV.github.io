@@ -50,6 +50,7 @@ exclude:
   - assets/js/_main.js
   - assets/js/plugins
   - images/sunset-street.png
+  - images/disco-harbour.png
   - legacy/assets/scss
 
 collections:

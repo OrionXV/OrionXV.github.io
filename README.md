@@ -12,6 +12,7 @@ Academic Pages / Jekyll portfolio at https://orionxv.github.io.
 - `_data/experience.yml`: work and research experience
 - `_pages/cv.md`: education, tools, awards, and leadership
 - `assets/css/sunset.css`: custom visual theme
+- `assets/css/disco.css`: alternate isometric harbour / paper theme
 - `legacy/`: the previous site, preserved with its original assets
 
 ## Publish an article
@@ -36,6 +37,12 @@ For article images, add files under `images/articles/` and reference them as `![
 
 Original writing is reserved to Syed Arsalaan Nadim unless an article states otherwise. The template's MIT licence and third-party licences remain intact. See `_pages/copyright.md`. These are notices and permissions information, not a copyright registration.
 
+## Themes
+
+The header's **Disco** switch changes between the original Sunset theme and the isometric harbour theme. Sunset is the default. The choice is saved in the visitor's browser under `arsalaan-theme`, restored before rendering, and shared across tabs. If browser storage is blocked, switching still works for the current page. Without JavaScript, Sunset and all navigation remain available.
+
+Both themes use the same content and URLs. The archived `/legacy/` site is unchanged. The harbour illustration and generation prompt are documented in `ASSET-NOTES.md`.
+
 ## Preview
 
 With Ruby and Bundler installed:
@@ -52,6 +59,7 @@ Open http://127.0.0.1:4000. Jekyll must build the site; opening source files dir
 ```sh
 bundle exec jekyll build --safe
 node tests/site-check.mjs
+node tests/theme-check.mjs
 bundle exec ruby tests/articles-check.rb
 ```
 

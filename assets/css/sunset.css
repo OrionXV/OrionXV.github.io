@@ -38,9 +38,17 @@ h1, h2, h3 { color: var(--ink); }
 .site-links a, .site-links a:visited { display: block; color: #e8dff2; padding: 23px 0 20px; border-bottom: 3px solid transparent; }
 .site-links a:hover, .site-links a[aria-current="page"] { color: #ffd194; border-color: #f68c8c; }
 .masthead a:focus-visible, .menu-toggle:focus-visible { outline-color: #ffd194; }
-.menu-toggle { display: none; }
-.site-banner { height: clamp(185px, 22vw, 300px); overflow: hidden; border-bottom: 5px solid #ebae70; background: #514073; }
-.site-banner img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 55%; }
+.header-controls { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+#site-links { margin-left: auto; }
+.menu-toggle { display: none; background: transparent; color: #fff2df; padding: 10px 0; border: 0; font-size: .8rem; min-height: 44px; cursor: pointer; }
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 7px 10px; border: 1px solid #79698f; border-radius: 4px; background: transparent; color: #f3e9d9; font: inherit; font-size: .73rem; line-height: 1; cursor: pointer; white-space: nowrap; }
+.theme-toggle[hidden] { display: none; }
+.theme-toggle:hover { background: #3b2e50; }
+.theme-toggle:focus-visible { outline-color: #ffd194; }
+.theme-track { display: block; position: relative; width: 28px; height: 16px; border: 1px solid #b4a8c6; border-radius: 10px; flex: 0 0 28px; }
+.theme-track::after { content: ""; position: absolute; top: 3px; left: 3px; width: 8px; height: 8px; background: #d7cbe6; border-radius: 50%; }
+.theme-toggle[aria-checked="true"] .theme-track::after { transform: translateX(12px); }
+.site-banner { height: clamp(185px, 22vw, 300px); overflow: hidden; border-bottom: 5px solid #ebae70; background: #514073 url("../../images/sunset-street.jpg") 50% 55% / cover no-repeat; }
 #main { display: grid; grid-template-columns: 224px minmax(0, 1fr); gap: 68px; max-width: 1180px; padding: 0 32px; margin: 52px auto 0; animation: none; }
 #main::after, #main::before { display: none; }
 .sidebar, .sidebar.sticky { position: sticky; top: 106px; float: none; width: auto; max-width: none; height: auto; max-height: none; overflow: visible; align-self: start; padding: 0; margin: 0; transform: none; }
@@ -133,18 +141,24 @@ h1, h2, h3 { color: var(--ink); }
   .site-links { gap: 18px; }
   .sidebar .author__name { font-size: 1.35rem; }
 }
-@media (max-width: 700px) {
-  html { font-size: 16px; }
-  .masthead__inner-wrap { padding: 0 22px; }
+@media (max-width: 880px) {
   .sunset-nav { min-height: 64px; flex-wrap: wrap; gap: 0; }
-  .site-name { font-size: 1.12rem; }
-  .menu-toggle { display: none; background: transparent; color: #fff2df; padding: 10px 0 10px 12px; border: 0; font-size: .8rem; min-height: 44px; cursor: pointer; }
+  .site-name { margin-right: auto; }
+  .header-controls { order: 1; }
   .js .menu-toggle { display: block; }
-  #site-links { flex: 0 0 100%; }
+  #site-links { order: 2; flex: 0 0 100%; margin-left: 0; }
   .js #site-links { display: none; }
   .js #site-links.is-open { display: block; }
   .site-links { flex-wrap: wrap; justify-content: flex-start; gap: 0 25px; padding: 0 0 12px; }
   .site-links a { padding: 12px 0 9px; }
+}
+@media (max-width: 700px) {
+  html { font-size: 16px; }
+  .masthead__inner-wrap { padding: 0 22px; }
+  .site-name { font-size: 1.12rem; }
+  .header-controls { gap: 12px; }
+  .theme-toggle { gap: 6px; padding-inline: 8px; }
+  .theme-toggle > .fa-solid { display: none; }
   .site-banner { height: 190px; }
   #main { display: block; padding: 0 22px; margin-top: 28px; }
   .sidebar, .sidebar.sticky { position: static; margin-bottom: 32px; border-bottom: 1px solid var(--line); padding-bottom: 26px; }

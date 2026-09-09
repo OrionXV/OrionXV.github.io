@@ -73,6 +73,8 @@ for (const file of htmlFiles) {
     assert.ok(!/SGPO|Gridworld|Your Name|John Doe|Lorem ipsum/.test(html), `Unexpected content: ${path}`);
     assert.ok(!/\{\{|\{%/.test(html), `Unrendered Liquid: ${path}`);
     assert.ok(html.includes('Skip to content'), `Missing skip link: ${path}`);
+    assert.ok(html.includes('role="switch" aria-checked="false" aria-label="Disco theme"'), `Missing theme switch: ${path}`);
+    assert.ok(html.includes('href="/assets/css/disco.css"'), `Missing alternate theme: ${path}`);
     if (html.includes('class="profile-links"')) {
       assert.ok(html.includes('href="/assets/css/fontawesome.css"'), `Missing icon styles: ${path}`);
       for (const icon of ['fa-solid fa-envelope', 'fa-brands fa-github', 'fa-brands fa-linkedin']) {
@@ -121,6 +123,10 @@ assert.match(articles, /href="\/copyright\/"/);
 assert.ok(!existsSync(join(output, 'tests')), 'Tests should not be published.');
 assert.ok(!existsSync(join(output, 'Gemfile')), 'Build configuration should not be published.');
 assert.ok(!existsSync(join(output, 'images/profile.jpeg')), 'Personal photo should not be published with the new site.');
+assert.ok(!existsSync(join(output, 'images/disco-harbour.png')), 'The large source artwork should not be published.');
+for (const file of ['sunset-street.jpg', 'disco-harbour.jpg']) {
+  assert.ok(existsSync(join(output, 'images', file)), `Missing theme banner: ${file}`);
+}
 for (const font of ['fa-brands-400.woff2', 'fa-solid-900.woff2']) {
   assert.ok(existsSync(join(output, 'assets/webfonts', font)), `Missing contact icon font: ${font}`);
 }

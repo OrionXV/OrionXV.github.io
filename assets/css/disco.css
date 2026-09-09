@@ -1,0 +1,100 @@
+/* Harbour painting, charcoal surrounds, and a warm paper reading surface. */
+html[data-appearance="disco"] {
+  --paper: #e8dfcc;
+  --ink: #292e29;
+  --muted: #585b50;
+  --violet: #566852;
+  --teal: #285f5c;
+  --coral: #91472f;
+  --line: #bfb59e;
+  --global-code-background-color: #dfd7c5;
+  --global-code-text-color: #303a32;
+  --global-thead-color: #d5cbb6;
+  color-scheme: light;
+}
+html[data-appearance="disco"] body {
+  background-color: #293230;
+  background-image: repeating-linear-gradient(125deg, transparent 0 5px, rgba(8, 16, 14, .045) 5px 6px);
+}
+html[data-appearance="disco"] ::selection { background: #b9c4a3; color: #182f2c; }
+html[data-appearance="disco"] .masthead { background: #1c2423; border-bottom: 1px solid #606454; }
+html[data-appearance="disco"] .site-name { color: #ece0c5; font-style: italic; }
+html[data-appearance="disco"] .sun-mark {
+  border-radius: 0;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  background: conic-gradient(from 0deg at 50% 50%, #c5ad78 0 120deg, #996247 120deg 240deg, #e3cc99 240deg);
+  box-shadow: none;
+}
+html[data-appearance="disco"] .site-links li { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .73rem; }
+html[data-appearance="disco"] .site-links a { color: #ded8c7; }
+html[data-appearance="disco"] .site-links a:hover,
+html[data-appearance="disco"] .site-links a[aria-current="page"] { color: #edc987; border-color: #c07850; }
+html[data-appearance="disco"] .theme-toggle { border-color: #a19676; border-radius: 0; color: #f0dfb9; background: #39463e; }
+html[data-appearance="disco"] .theme-toggle:hover { background: #475746; }
+html[data-appearance="disco"] .theme-track { border-color: #d7cda9; background: #b09b67; }
+html[data-appearance="disco"] .theme-track::after { background: #1b2b26; }
+html[data-appearance="disco"] .site-banner {
+  background-color: #82948b;
+  background-image: url("../../images/disco-harbour.jpg");
+  background-position: 50% 52%;
+  border-bottom: 5px solid #ac714b;
+}
+html[data-appearance="disco"] #main { gap: 48px; }
+html[data-appearance="disco"] .page {
+  padding: 32px 38px 38px;
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(8deg, transparent 0 4px, rgba(99, 83, 52, .018) 4px 5px);
+  border-top: 4px solid #a4583b;
+  box-shadow: 6px 6px 0 #1c2522;
+}
+html[data-appearance="disco"] .page__title {
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: 2.45rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  line-height: 1.15;
+}
+html[data-appearance="disco"] .page__content { font-family: Georgia, "Times New Roman", serif; line-height: 1.8; }
+html[data-appearance="disco"] .page__content h2 { border-bottom-style: dashed; }
+html[data-appearance="disco"] .page__content a { text-decoration-thickness: 1px; }
+html[data-appearance="disco"] .sidebar { color: #d9d9c9; }
+html[data-appearance="disco"] .author__content { border-color: #c18b62; }
+html[data-appearance="disco"] .sidebar .author__name { color: #f0e2c7; }
+html[data-appearance="disco"] .profile-institution { color: #e0bf82; }
+html[data-appearance="disco"] .sidebar .profile-location,
+html[data-appearance="disco"] .sidebar .profile-note { color: #c0c6b6; }
+html[data-appearance="disco"] .sidebar .profile-note { border-color: #677060; }
+html[data-appearance="disco"] .profile-links a { color: #e5c68d; }
+html[data-appearance="disco"] .profile-links a:hover { color: #fff0ca; }
+html[data-appearance="disco"] .profile-links span { color: #e0a07a; }
+html[data-appearance="disco"] .profile-links a:focus-visible { outline-color: #edc987; }
+html[data-appearance="disco"] .research-list > div { border-color: #687854; }
+html[data-appearance="disco"] .research-list > div:nth-child(2) { border-color: #a4593c; }
+html[data-appearance="disco"] .research-list > div:nth-child(3) { border-color: #4c7870; }
+html[data-appearance="disco"] .project-thumb img { border-radius: 0; border: 1px solid #9c967f; background: #f1eadb; }
+html[data-appearance="disco"] .project-figure { background: #d6cbb2; }
+html[data-appearance="disco"] .section-jump { border-color: #a5987f; }
+html[data-appearance="disco"] .project-meta,
+html[data-appearance="disco"] .project-detail-meta,
+html[data-appearance="disco"] .article-meta,
+html[data-appearance="disco"] .experience-period { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+html[data-appearance="disco"] .page__footer { background: #1c2423; color: #c0c6b6; border-color: #606454; }
+html[data-appearance="disco"] .footer-inner a { color: #dfc798; }
+html[data-appearance="disco"] .footer-inner a:hover { color: #fff0ca; }
+html[data-appearance="disco"] .footer-inner a:focus-visible { outline-color: #edc987; }
+@media (max-width: 1000px) {
+  html[data-appearance="disco"] #main { gap: 30px; }
+  html[data-appearance="disco"] .page { padding: 26px; }
+}
+@media (max-width: 700px) {
+  html[data-appearance="disco"] .sidebar { border-color: #677060; }
+  html[data-appearance="disco"] .page { padding: 25px 20px; box-shadow: 4px 4px 0 #1c2522; }
+  html[data-appearance="disco"] .page__title { font-size: 2.1rem; }
+  html[data-appearance="disco"] .project-row { grid-template-columns: 70px minmax(0, 1fr); gap: 14px; }
+  html[data-appearance="disco"] .project-thumb img { width: 70px; height: 70px; }
+}
+@media print {
+  html[data-appearance="disco"] body,
+  html[data-appearance="disco"] .page { background: white; color: black; padding: 0; border: 0; box-shadow: none; }
+}
