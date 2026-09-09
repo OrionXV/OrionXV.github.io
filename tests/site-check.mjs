@@ -73,6 +73,12 @@ for (const file of htmlFiles) {
     assert.ok(!/SGPO|Gridworld|Your Name|John Doe|Lorem ipsum/.test(html), `Unexpected content: ${path}`);
     assert.ok(!/\{\{|\{%/.test(html), `Unrendered Liquid: ${path}`);
     assert.ok(html.includes('Skip to content'), `Missing skip link: ${path}`);
+    if (html.includes('class="profile-links"')) {
+      assert.ok(html.includes('href="/assets/css/fontawesome.css"'), `Missing icon styles: ${path}`);
+      for (const icon of ['fa-solid fa-envelope', 'fa-brands fa-github', 'fa-brands fa-linkedin']) {
+        assert.ok(html.includes(`class="${icon}" aria-hidden="true"`), `Missing contact icon ${icon}: ${path}`);
+      }
+    }
     assert.ok(!/img[^>]+(?:profile\.jpeg|img-01\.jpeg)/.test(html), `Unwanted personal photo: ${path}`);
     for (const image of html.matchAll(/<img\b[^>]*>/g)) {
       assert.ok(/\balt="[^"]*"/.test(image[0]), `Missing image alt: ${path}`);
@@ -115,5 +121,8 @@ assert.match(articles, /href="\/copyright\/"/);
 assert.ok(!existsSync(join(output, 'tests')), 'Tests should not be published.');
 assert.ok(!existsSync(join(output, 'Gemfile')), 'Build configuration should not be published.');
 assert.ok(!existsSync(join(output, 'images/profile.jpeg')), 'Personal photo should not be published with the new site.');
+for (const font of ['fa-brands-400.woff2', 'fa-solid-900.woff2']) {
+  assert.ok(existsSync(join(output, 'assets/webfonts', font)), `Missing contact icon font: ${font}`);
+}
 
 console.log(`PASS: ${oldFiles.length} legacy files unchanged; 22 projects preserved in order; ${htmlFiles.length} HTML pages; ${checkedLinks} internal links/assets verified.`);

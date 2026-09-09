@@ -53,7 +53,7 @@ h1, h2, h3 { color: var(--ink); }
 .profile-links li { margin: 0; font-size: .81rem; }
 .profile-links a { display: inline-flex; align-items: center; gap: 9px; min-height: 34px; text-decoration: none; }
 .profile-links a:hover { text-decoration: underline; }
-.profile-links span { width: 15px; color: var(--coral); }
+.profile-links span { width: 18px; flex: 0 0 18px; color: var(--coral); font-size: 1rem; text-align: center; }
 .sidebar .profile-note { margin-top: 24px; padding-top: 19px; border-top: 1px solid var(--line); color: var(--muted); font-size: .75rem; line-height: 1.85; }
 .page { float: none; width: auto; padding: 0; min-width: 0; }
 .page .page__inner-wrap { float: none; width: 100%; margin: 0; }
