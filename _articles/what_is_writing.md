@@ -2,7 +2,7 @@
 title: "What is writing to you?"
 date: 2018-12-31
 category: Essay
-summary: "We hold the brush of destiny in one hand and the parchment of fate in another."
+summary: "An article I wrote for the school magzine while I was a fairly young author."
 published: true
 ---
 
