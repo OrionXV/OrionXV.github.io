@@ -2,7 +2,7 @@
 title: "What is writing to you?"
 date: 2018-12-31
 category: Essay
-summary: "An article I wrote for the school magzine while I was a fairly young author."
+summary: "An article I wrote for the school magzine when I was a fairly young author."
 published: true
 ---
 
