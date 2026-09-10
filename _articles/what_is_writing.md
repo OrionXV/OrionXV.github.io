@@ -48,4 +48,3 @@ I believe that your prehistoric brains would burst from vast knowledge my advent
 Right now I think that writing is not just scribbling words or typing them… but, it is a craft. It is sketching the universe on paper. The act of translating your will, rather yourself, into something that can be understood by all. It is culminating your experiences, your journey and what you are and giving it to someone else. Someone who would learn from it, inculcate it into themselves, express it through their actions or just simply make them happy.
 
 That’s what writing is to me- giving other, in bits and pieces, my journey, my path, my essence and hence, myself.
-
