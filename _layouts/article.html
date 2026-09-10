@@ -1,7 +1,16 @@
 ---
 layout: single
 ---
-<div class="article-body">
+{% assign article_image = page.image | default: '' | strip %}
+{% assign article_category = page.category | default: '' | strip | downcase %}
+{% if article_image != '' %}
+<figure class="article-figure">
+  <img src="{{ article_image | relative_url | escape }}" alt="{{ page.image_alt | default: '' | escape }}" decoding="async">
+  {% assign image_caption = page.image_caption | default: '' | strip %}
+  {% if image_caption != '' %}<figcaption>{{ image_caption | escape }}</figcaption>{% endif %}
+</figure>
+{% endif %}
+<div class="article-body{% if article_category == 'poem' or article_category == 'poetry' %} article-body--poem{% endif %}">
   {{ content }}
 </div>
 {% assign publication_date = page.date | default: site.time %}

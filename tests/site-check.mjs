@@ -113,8 +113,10 @@ assert.ok(!/pipeline’s KPI|limited evaluations|sample.limited/.test(research +
 const articles = read('_site/articles/index.html');
 assert.match(articles, /href="\/articles\/" aria-current="page"/);
 assert.match(articles, /<h1[^>]*>\s*Articles\s*<\/h1>/);
-assert.ok(!existsSync(join(output, 'articles/template')), 'The starter article must not be published.');
-assert.ok(!read('_site/sitemap.xml').includes('/articles/template/'), 'The starter article must not be indexed.');
+for (const template of ['template', 'poem-template']) {
+  assert.ok(!existsSync(join(output, 'articles', template)), `The starter ${template} must not be published.`);
+  assert.ok(!read('_site/sitemap.xml').includes(`/articles/${template}/`), `The starter ${template} must not be indexed.`);
+}
 const copyright = read('_site/copyright/index.html');
 assert.match(copyright, /Original writing/);
 assert.match(copyright, /all rights reserved/i);

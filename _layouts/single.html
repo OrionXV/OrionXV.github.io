@@ -35,7 +35,8 @@ layout: default
         {% endif %}
         
         {% if page.collection == 'articles' %}
-          <p class="article-meta">{% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time> · {% endif %}{{ site.name }}</p>
+          {% assign article_category = page.category | default: '' | strip %}
+          <p class="article-meta">{% if article_category != '' %}<span class="article-category">{{ article_category | escape }}</span> · {% endif %}{% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time> · {% endif %}{{ site.name }}</p>
         {% elsif page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.venue and page.date %}

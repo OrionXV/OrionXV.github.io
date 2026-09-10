@@ -17,7 +17,9 @@ Dir.mktmpdir("portfolio-articles-check-") do |temporary|
     FileUtils.cp_r(File.join(ROOT, directory), source)
   end
   FileUtils.mkdir_p(File.join(source, "_articles"))
-  FileUtils.cp(File.join(ROOT, "_articles/template.md"), File.join(source, "_articles/template.md"))
+  Dir.glob(File.join(ROOT, "_articles/*template.md")).each do |template|
+    FileUtils.cp(template, File.join(source, "_articles", File.basename(template)))
+  end
 
   # Fixtures exist only in this disposable build, never in the public site.
   fixtures = {
@@ -36,6 +38,10 @@ Dir.mktmpdir("portfolio-articles-check-") do |temporary|
       title: "Newer article"
       date: 2025-07-21
       summary: "An **explicit** summary & details."
+      category: 'Notes & "essays"'
+      image: /images/sunset-street.jpg
+      image_alt: 'A street & "sunset"'
+      image_caption: 'Evening light & clouds. Credit: "Example".'
       published: true
       ---
 
@@ -49,6 +55,41 @@ Dir.mktmpdir("portfolio-articles-check-") do |temporary|
       ```python
       print("hello")
       ```
+    MARKDOWN
+    "poem.md" => <<~MARKDOWN,
+      ---
+      title: "Poem fixture"
+      date: 2024-06-15
+      category: Poem
+      published: true
+      ---
+
+      First line<br>
+      Second *line*
+
+      Another stanza<br>
+      Its final line
+    MARKDOWN
+    "empty-image.md" => <<~MARKDOWN,
+      ---
+      title: "Empty image fixture"
+      date: 2022-01-01
+      image: ""
+      category: ""
+      published: true
+      ---
+
+      No picture or category supplied.
+    MARKDOWN
+    "remote-image.md" => <<~MARKDOWN,
+      ---
+      title: "Remote image fixture"
+      date: 2021-01-01
+      image: https://example.com/photo.jpg
+      published: true
+      ---
+
+      A remote picture with no caption.
     MARKDOWN
     "hidden-draft.md" => <<~MARKDOWN
       ---
@@ -81,7 +122,7 @@ Dir.mktmpdir("portfolio-articles-check-") do |temporary|
   check(listing.include?("An explicit summary &amp; details."), "Article summary text or escaping is incorrect")
   check(!listing.include?("Hidden draft fixture"), "Draft appeared in the article list")
 
-  %w[hidden-draft template].each do |slug|
+  %w[hidden-draft template poem-template].each do |slug|
     check(!File.exist?(File.join(destination, "articles", slug)), "Draft output exists: #{slug}")
     sitemap = File.read(File.join(destination, "sitemap.xml"))
     check(!sitemap.include?("/articles/#{slug}/"), "Draft leaked into the sitemap: #{slug}")
@@ -102,6 +143,34 @@ Dir.mktmpdir("portfolio-articles-check-") do |temporary|
   check(newer.include?("Copyright &amp; permissions"), "Copyright link is missing")
   check(newer.include?("← All articles"), "Article return link is missing")
 
+  [listing, newer].each do |html|
+    check(html.include?('<span class="article-category">Notes &amp; &quot;essays&quot;</span>'), "Category must appear and be escaped on both pages")
+    check(html.match?(/<img[^>]+src="\/images\/sunset-street.jpg"[^>]+alt="A street &amp; &quot;sunset&quot;"/), "Article picture or alt text is missing")
+  end
+  check(newer.include?('<figcaption>Evening light &amp; clouds. Credit: &quot;Example&quot;.</figcaption>'), "Image caption is missing or unescaped")
+  check(newer.include?('property="og:image" content="https://orionxv.github.io/images/sunset-street.jpg"'), "Article sharing image is incorrect")
+  check(!older.include?('class="article-figure"') && !older.include?('class="article-category"'), "Optional fields must not create empty elements")
+  empty_image = File.read(File.join(destination, "articles/empty-image/index.html"))
+  check(!empty_image.include?('class="article-figure"') && !empty_image.include?('class="article-category"'), "Blank fields must not create empty elements")
+  remote = File.read(File.join(destination, "articles/remote-image/index.html"))
+  check(remote.include?('src="https://example.com/photo.jpg" alt=""'), "Remote image URL or decorative alt fallback is incorrect")
+  check(!remote.include?("<figcaption>"), "Missing caption must not create an empty caption")
+  poem = File.read(File.join(destination, "articles/poem/index.html"))
+  check(poem.include?('class="article-body article-body--poem"'), "Poem reading style was not applied")
+  check(poem.match?(/First line<br\s*\/?>\s*Second <em>line<\/em>/), "Poem line breaks and emphasis must survive production compression")
+  check(poem.match?(/<p>Another stanza<br\s*\/?>\s*Its final line<\/p>/), "Poem stanza break was lost")
+  check(listing.include?('<span class="article-category">Poem</span>'), "Poem category must appear in the listing")
+  check(!newer.include?('article-body--poem'), "Prose must not receive poem styling")
+
+  # Local image paths must also work when hosted beneath a project prefix.
+  Jekyll::Site.new(configuration.merge("baseurl" => "/preview")).process
+  prefixed = File.read(File.join(destination, "articles/z-newer/index.html"))
+  check(prefixed.include?('src="/preview/images/sunset-street.jpg"'), "Local image ignored the site prefix")
+  check(prefixed.include?('property="og:image" content="https://orionxv.github.io/preview/images/sunset-street.jpg"'), "Sharing image ignored the site prefix")
+  prefixed_remote = File.read(File.join(destination, "articles/remote-image/index.html"))
+  check(prefixed_remote.include?('src="https://example.com/photo.jpg"'), "Remote image must not receive a site prefix")
+  Jekyll::Site.new(configuration).process
+
   if ARGV.include?("--preview")
     preview = Dir.mktmpdir("portfolio-articles-preview-")
     FileUtils.cp_r(destination, File.join(preview, "site"))
@@ -109,7 +178,7 @@ Dir.mktmpdir("portfolio-articles-check-") do |temporary|
   end
 
   # Also exercise the empty state after removing our published fixtures.
-  %w[a-older.md z-newer.md].each do |name|
+  %w[a-older.md z-newer.md poem.md empty-image.md remote-image.md].each do |name|
     File.delete(File.join(source, "_articles", name))
   end
   Jekyll::Site.new(configuration).process
@@ -117,4 +186,4 @@ Dir.mktmpdir("portfolio-articles-check-") do |temporary|
   check(listing.include?("No articles published yet."), "Empty state is missing")
 end
 
-puts "PASS: Markdown rendering, article order, draft exclusion, navigation, dates, copyright, and empty state."
+puts "PASS: Markdown, images, captions, categories, poems, site prefixes, article order, drafts, navigation, dates, copyright, and empty state."

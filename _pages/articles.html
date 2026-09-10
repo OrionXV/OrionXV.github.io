@@ -1,17 +1,22 @@
 ---
 title: Articles
 permalink: /articles/
-description: "Articles and writing by Syed Arsalaan Nadim."
+description: "Essays, poems, and other writing by Syed Arsalaan Nadim."
 ---
 {% assign articles = site.articles | where_exp: 'article', 'article.published != false' | sort: 'date' | reverse %}
 {% if articles.size > 0 %}
 <div class="article-list">
   {% for article in articles %}
-  <article class="article-entry">
-    {% if article.date %}<p class="article-meta"><time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%B %-d, %Y" }}</time></p>{% endif %}
-    <h2><a href="{{ article.url | relative_url }}">{{ article.title | escape }}</a></h2>
-    {% assign summary = article.summary | default: article.excerpt %}
-    {% if summary %}<p class="article-summary">{{ summary | markdownify | strip_html | truncatewords: 45 | escape_once }}</p>{% endif %}
+  {% assign article_image = article.image | default: '' | strip %}
+  {% assign article_category = article.category | default: '' | strip %}
+  <article class="article-entry{% if article_image != '' %} article-entry--illustrated{% endif %}">
+    {% if article_image != '' %}<img class="article-thumbnail" src="{{ article_image | relative_url | escape }}" alt="{{ article.image_alt | default: '' | escape }}" width="320" height="240" loading="lazy" decoding="async">{% endif %}
+    <div class="article-entry-text">
+      <p class="article-meta">{% if article_category != '' %}<span class="article-category">{{ article_category | escape }}</span>{% if article.date %} · {% endif %}{% endif %}{% if article.date %}<time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%B %-d, %Y" }}</time>{% endif %}</p>
+      <h2><a href="{{ article.url | relative_url }}">{{ article.title | escape }}</a></h2>
+      {% assign summary = article.summary | default: article.excerpt %}
+      {% if summary %}<p class="article-summary">{{ summary | markdownify | strip_html | truncatewords: 45 | escape_once }}</p>{% endif %}
+    </div>
   </article>
   {% endfor %}
 </div>

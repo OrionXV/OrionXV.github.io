@@ -21,3 +21,12 @@
 ## Limits
 
 This is a new visual design, so comparison against an existing screenshot baseline is inconclusive. The checks above are functional/visual smoke tests, not a full accessibility audit. Automated axe, screen-reader testing, console-log inspection, and production Core Web Vitals were not measured.
+
+## Article images and categories — 11 September 2026
+
+- Production build and site/theme checks pass: 35 pages, 837 internal links/assets, 199 unchanged legacy files.
+- Disposable article fixtures verify optional/blank images and categories, escaped alt text/captions, local and remote URLs, site prefixes, sharing images, poem line/stanza breaks, and draft exclusion. No test writing is published.
+- The author's essay retains every word and the repeated opening title. Paragraph spacing is fixed; it has the Essay category, no cover image, and ordinary prose styling.
+- Browser smoke checks at 1440, 768, and 375 pixel widths covered the image detail page, category listing, prose, and poem template. Both themes were exercised; inspected pages had no horizontal overflow. The local cover image loaded and its accessible description and caption were present.
+- Article links, return link, and theme switch worked. The inspected browser log contained no warnings or errors. Viewport overrides were reset.
+- No committed screenshot baseline exists for these additions, so visual regression is inconclusive. These are targeted smoke checks; Core Web Vitals, axe, and screen-reader testing were not run.

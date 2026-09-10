@@ -27,11 +27,31 @@ The article appears at `/articles/my-article/` and is added to `/articles/`, new
 Optional fields above the second `---` line:
 
 - `summary: "A short description"` replaces the first-paragraph excerpt on the Articles page.
+- `category: Essay` adds a label to the listing and the article. Use `Poem`, `Notes`, or any label you like. Leave it out for no label.
+- `image: /images/articles/my-picture.jpg` adds a thumbnail to the listing and the full picture above the writing. It also becomes the image used when sharing the article link. Local paths should begin with `/`; an `https://` image URL also works.
+- `image_alt: "Description of the picture"` describes the image for readers using a screen reader. Use an empty string only for a decorative image.
+- `image_caption: "Caption and image credit"` adds an optional plain-text caption beneath the full picture.
 - `copyright_year: 2024` uses an earlier original publication year in the article notice. Otherwise, the year comes from `date`.
 
 `published: false` hides the rendered page, but **does not make the source private**: this GitHub repository is public. Keep confidential drafts outside this repository. Future dates alone do not hide articles; use `published: false` until ready.
 
-For article images, add files under `images/articles/` and reference them as `![Description](/images/articles/filename.jpg)`. Only upload material you have permission to publish.
+Add image files under `images/articles/`, then set `image` in the article's settings. To put additional pictures within your writing, use `![Description](/images/articles/filename.jpg)`. Only upload material you have permission to publish.
+
+## Poems and paragraph breaks
+
+For prose, leave a blank line between paragraphs. A single new line in Markdown does not start a new paragraph. The page title is already displayed, but you can repeat it in the body if you want.
+
+For a poem, copy `_articles/poem-template.md`, keep `category: Poem`, and replace the sample text. This gives the poem a serif reading style and extra space between stanzas. Add `<br>` wherever you want a line break, and leave a blank line between stanzas:
+
+```markdown
+First line<br>
+Second line
+
+Next stanza<br>
+Its final line
+```
+
+The category does not automatically insert line breaks; use the example above so they also survive the site's production formatting. Images, summaries, dates, and publishing work the same way as for essays. Both templates are unpublished until you copy them and set `published: true`.
 
 ## Copyright
 

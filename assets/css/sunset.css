@@ -113,14 +113,23 @@ h1, h2, h3 { color: var(--ink); }
 .cv-details[open] summary { margin-bottom: 20px; }
 .article-entry { padding: 26px 0; border-bottom: 1px solid var(--line); }
 .article-entry:first-child { padding-top: 0; }
+.article-entry--illustrated { display: grid; grid-template-columns: 144px minmax(0, 1fr); gap: 24px; align-items: start; }
+.article-entry-text { min-width: 0; overflow-wrap: anywhere; }
+.article-thumbnail { display: block; width: 144px; height: 108px; object-fit: contain; border: 1px solid var(--line); border-radius: 4px; }
 .page__content .article-entry h2 { margin: 0 0 12px; padding: 0; border: 0; font-size: 1.45rem; }
 .article-entry h2 a { color: var(--ink); text-decoration: none; }
 .article-entry h2 a:hover { color: var(--teal); text-decoration: underline; }
 .article-meta, .page__content .article-meta { color: var(--muted); font-size: .78rem; margin: 0 0 12px; }
 .page__inner-wrap > header > .article-meta { margin: -10px 0 28px; }
+.article-category { color: var(--teal); font-weight: 600; }
 .page__content .article-summary { font-size: .94rem; margin: 0; }
 .articles-empty { color: var(--muted); }
+.article-figure { display: block; margin: 0 0 30px; }
+.article-figure img { display: block; width: 100%; height: auto; max-height: 520px; object-fit: contain; }
+.article-figure figcaption { margin-top: 10px; color: var(--muted); font-size: .78rem; line-height: 1.6; text-align: left; overflow-wrap: anywhere; }
 .article-body { line-height: 1.85; overflow-wrap: anywhere; }
+.article-body--poem { font-family: Georgia, "Times New Roman", serif; line-height: 1.95; }
+.page__content .article-body--poem p { margin-bottom: 1.8em; }
 .article-body img { max-width: 100%; height: auto; }
 .article-body pre { max-width: 100%; overflow: auto; }
 .article-body .highlighter-rouge::before, .article-body figure.highlight::before { content: none; }
@@ -176,6 +185,8 @@ h1, h2, h3 { color: var(--ink); }
   .page__content h2 { margin-top: 34px; font-size: 1.4rem; }
   .research-list > div { padding: 10px 0 10px 14px; gap: 5px; }
   .project-row { grid-template-columns: 92px minmax(0, 1fr); gap: 17px; padding: 23px 0; }
+  .article-entry--illustrated { grid-template-columns: 1fr; gap: 18px; }
+  .article-thumbnail { width: 160px; height: 120px; }
   .project-thumb img { width: 92px; height: 80px; }
   .page__content .project-row h3 { font-size: 1rem; }
   .page__content .project-row p { font-size: .84rem; }

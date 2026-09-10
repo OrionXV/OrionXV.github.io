@@ -4,6 +4,12 @@
 <link rel="stylesheet" href="{{ '/assets/css/disco.css' | relative_url }}">
 <link rel="icon" type="image/svg+xml" href="{{ '/images/favicon.svg' | relative_url }}">
 <meta name="theme-color" content="#241a3b">
+{% assign article_image = page.image | default: '' | strip %}
+{% if page.collection == 'articles' and article_image != '' %}
+<meta property="og:image" content="{{ article_image | absolute_url | escape }}">
+<meta property="og:image:alt" content="{{ page.image_alt | default: '' | escape }}">
+{% else %}
 <meta property="og:image" content="{{ '/images/sunset-street.jpg' | absolute_url }}">
 <meta property="og:image:alt" content="An illustrated shopping street beneath violet and coral sunset clouds">
+{% endif %}
 <meta name="twitter:card" content="summary_large_image">
