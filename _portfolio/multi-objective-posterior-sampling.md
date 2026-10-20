@@ -2,6 +2,7 @@
 title: "High-Dimensional Multi-Objective Black-Box Optimization via Diffusion Posterior Sampling"
 order: 23
 featured: true
+preprint: true
 group: "research"
 image: "/images/projects/preprint.svg"
 image_alt: "Abstract network of connected points"

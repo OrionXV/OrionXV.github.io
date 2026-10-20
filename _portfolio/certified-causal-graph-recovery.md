@@ -2,6 +2,7 @@
 title: "Certified Causal Graph Recovery in Linear State-Space Systems from Adaptive Two-View Trajectories"
 order: 25
 featured: true
+preprint: true
 group: "research"
 image: "/images/projects/preprint.svg"
 image_alt: "Abstract network of connected points"

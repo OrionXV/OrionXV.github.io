@@ -2,6 +2,7 @@
 title: "Generator Disagreement Acquisition for Sample-Efficient Molecular Discovery"
 order: 24
 featured: true
+preprint: true
 group: "research"
 image: "/images/projects/preprint.svg"
 image_alt: "Abstract network of connected points"

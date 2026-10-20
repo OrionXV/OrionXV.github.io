@@ -6,6 +6,13 @@ description: "Research in sequential decision-making, causality, and agentic sys
 
 {% include research-areas.html %}
 
+## Preprints
+
+{% assign preprints = site.portfolio | where: "preprint", true | sort: 'order' %}
+{% for project in preprints %}
+{% include project-row.html %}
+{% endfor %}
+
 ## Current work
 
 ### Graph diffusion & molecule generation
