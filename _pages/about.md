@@ -12,7 +12,7 @@ With Prof. Jian Kang, I work on **graph diffusion models and molecule generation
 
 I was a Research Engineer Intern at GenBio AI and a Research Assistant at Aalto University. Before MBZUAI, I worked in Technical Support & Research at ONGC Videsh. I studied Petroleum Engineering at IIT (ISM) Dhanbad.
 
-## Research areas
+## Research areas {: .compact-heading}
 
 {% include research-areas.html %}
 

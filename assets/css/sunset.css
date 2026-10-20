@@ -71,6 +71,7 @@ h1, h2, h3 { color: var(--ink); }
 .page__content p { margin: 0 0 1.2em; }
 .page__content h2 { font-family: Georgia, serif; font-weight: 400; font-size: 1.55rem; margin: 40px 0 21px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
 .page__content h3 { margin: 24px 0 9px; font-size: 1.02rem; line-height: 1.35; }
+.page__content h2.compact-heading { font-size: 1.05rem; margin: 30px 0 14px; padding-bottom: 8px; }
 .page__content .intro { font-size: 1.08rem; line-height: 1.75; }
 .page__content .eyebrow { color: var(--coral); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 650; margin: -8px 0 20px; }
 .page__meta { display: none; }
