@@ -1,8 +1,8 @@
 - id: research
   title: Research
+- id: software
+  title: Software & side projects
 - id: applied
   title: Applied machine learning
 - id: earlier
   title: Earlier work
-- id: software
-  title: Software & side projects
