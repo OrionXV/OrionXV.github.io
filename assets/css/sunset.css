@@ -98,7 +98,7 @@ h1, h2, h3 { color: var(--ink); }
 .section-jump a { text-decoration: underline; }
 .project-figure { margin: 24px 0; padding: 22px; background: #f1e9e0; display: block; }
 .project-figure img { display: block; object-fit: contain; max-height: 360px; width: 100%; margin: 0; }
-.sidebar .profile-avatar { display: block; width: 150px; height: 150px; object-fit: cover; object-position: 50% 30%; border-radius: 50%; margin: 0 0 22px; }
+.sidebar .profile-avatar { display: block; width: 150px; height: 150px; object-fit: cover; object-position: 50% 30%; border-radius: 50%; margin: 0 auto 22px; }
 .page__content .back-link { margin-top: 32px; font-size: .85rem; }
 .experience-entry { margin: 0 0 30px; padding: 0 0 28px; border-bottom: 1px solid var(--line); }
 .experience-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
