@@ -21,9 +21,18 @@ I was a Research Engineer Intern at GenBio AI and a Research Assistant at Aalto 
 <h2 id="projects">Selected projects</h2>
 
 {% assign selected = site.portfolio | where: "featured", true | sort: 'order' %}
-{% for project in selected %}
+
+<h3>Research</h3>
+
+{% for project in selected %}{% if project.group == "research" %}
 {% include project-row.html %}
-{% endfor %}
+{% endif %}{% endfor %}
+
+<h3>Open source contributions</h3>
+
+{% for project in selected %}{% if project.group == "software" %}
+{% include project-row.html %}
+{% endif %}{% endfor %}
 
 <p class="section-link"><a href="{{ '/projects/' | relative_url }}">All {{ site.portfolio.size }} projects <span aria-hidden="true">→</span></a></p>
 
