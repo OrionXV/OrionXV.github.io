@@ -8,7 +8,7 @@ image: "/images/projects/preprint.svg"
 image_alt: "Abstract network of connected points"
 metadata: "Preprint · September 2026"
 authors: "<strong>Syed Arsalaan Nadim</strong>, Yonghan Yang"
-summary: "Causal discovery must separate structure from noise, even when data come from adaptive experiments. Releasing the second of two noisy views only after each action keeps residuals free of policy adaptivity. A cross-view contrast cancels drifting sensor noise, and simultaneous confidence rectangles cover the coefficients. On all 20 fresh trajectories under heavy noise, the method recovers the correct complete graph, while a two-view ICA estimator fails at every budget."
+summary: "Recovers the causal graph of linear dynamical systems from adaptive two-view data, with statistical guarantees. It gets the correct graph on all 20 test trajectories under heavy sensor noise, where a two-view ICA baseline fails."
 ---
 
-Causal discovery must separate structure from noise, even when data come from adaptive experiments. Releasing the second of two noisy views only after each action keeps residuals free of policy adaptivity. A cross-view contrast cancels drifting sensor noise, and simultaneous confidence rectangles cover the coefficients. On all 20 fresh trajectories under heavy noise, the method recovers the correct complete graph, while a two-view ICA estimator fails at every budget.
+Recovers the causal graph of linear dynamical systems from adaptive two-view data, with statistical guarantees. It gets the correct graph on all 20 test trajectories under heavy sensor noise, where a two-view ICA baseline fails.
