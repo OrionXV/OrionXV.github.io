@@ -8,9 +8,9 @@ description: "Syed Arsalaan Nadim. MSc student at MBZUAI working on graph diffus
 
 <p class="intro">I’m Arsalaan, an MSc student at MBZUAI. I work on sequential decision-making, causality, and agentic systems.</p>
 
-With Prof. Jian Kang, I work on **graph diffusion models and molecule generation**. With Prof. Raúl Astudillo, I work on **Bayesian optimization and multi-objective black-box optimization**.
+With Prof. Jian Kang, I work on **graph diffusion models and molecule generation**. With Prof. Raúl Astudillo, I work on **Bayesian optimization and multi-objective black-box optimization**. I also work on **causality** with Prof. Jian Kang and Yan Gong.
 
-I was a Research Engineer Intern at GenBio AI and a Research Assistant at Aalto University. Before MBZUAI, I worked in Technical Support & Research at ONGC Videsh. I studied Petroleum Engineering at IIT (ISM) Dhanbad.
+I was a Research Engineer Intern at GenBio AI and a Research Assistant at Aalto University, where I worked with Joongi Shin under the supervision of Antti Oulasvirta. Before MBZUAI, I worked in Technical Support & Research at ONGC Videsh. I studied Petroleum Engineering at IIT (ISM) Dhanbad.
 
 ## Research areas {: .compact-heading}
 

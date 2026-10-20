@@ -23,9 +23,13 @@ With Prof. Jian Kang at MBZUAI, I work on graph diffusion models and molecule ge
 
 With Prof. Raúl Astudillo at MBZUAI, I work on Bayesian optimization and multi-objective black-box optimization.
 
+### Causality
+
+With Prof. Jian Kang and Yan Gong, I work on causality.
+
 ## Earlier research
 
-At Aalto University, I worked on generative UI and Bayesian optimization to model user preferences.
+At Aalto University, I worked with Joongi Shin under the supervision of Antti Oulasvirta on generative UI and Bayesian optimization to model user preferences.
 
 At GenBio AI, I worked on optimization skills and TTA strategies for Virtual Cell Harness and its agent workflows. [Experience →]({{ '/experience/' | relative_url }})
 
