@@ -17,7 +17,7 @@ description: "Research in sequential decision-making, causality, and agentic sys
 
 ### Graph diffusion & molecule generation
 
-With Prof. Jian Kang at MBZUAI, I work on graph diffusion models and molecule generation.
+With Prof. Jian Kang at MBZUAI, I work on graph diffusion models (molecular generation).
 
 ### Bayesian optimization
 
@@ -25,7 +25,7 @@ With Prof. Raúl Astudillo at MBZUAI, I work on Bayesian optimization and multi-
 
 ### Causality
 
-With Prof. Jian Kang and Yan Gong, I work on causality.
+With Prof. Yan Gong, I work on causal discovery and representation learning.
 
 ## Earlier research
 
