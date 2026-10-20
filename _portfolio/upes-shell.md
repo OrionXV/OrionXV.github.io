@@ -1,6 +1,7 @@
 ---
 title: "UPES Shell Innovation Challenge"
 order: 18
+published: false
 group: "earlier"
 metadata: "Competition proposal · February 2022"
 summary: "Our proposal for the UPES Shell Innovation Challenge, where the team placed third. The linked document is the competition abstract."
