@@ -1,4 +1,5 @@
 <div class="profile" itemscope itemtype="https://schema.org/Person">
+  {% if site.author.avatar %}<img class="profile-avatar" src="{{ site.author.avatar | relative_url }}" alt="Arsalaan smiling and hugging a large pink plush bear in a store" width="150" height="150" itemprop="image">{% endif %}
   <div class="author__content">
     <h2 class="author__name" itemprop="name">Syed Arsalaan<br> Nadim</h2>
     <p class="author__bio">{{ site.author.bio }}<br><span class="profile-institution">{{ site.author.employer }}</span></p>

@@ -11,6 +11,7 @@ timezone: Asia/Dubai
 
 author:
   name: Syed Arsalaan Nadim
+  avatar: "/images/about-photo.jpg"
   bio: "MSc · Statistics & Data Science"
   employer: MBZUAI
   location: Abu Dhabi, UAE
