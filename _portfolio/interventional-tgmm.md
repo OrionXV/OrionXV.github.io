@@ -1,6 +1,7 @@
 ---
 title: "Interventional TGMM"
 order: 1
+featured: true
 group: "research"
 metadata: "Distribution shifts · Exploratory study · 2026"
 summary: "Tested a learned mixture solver under changes to the data distribution on Wine, Iris, and Digits. This is a robustness study, with limitations documented alongside the report."

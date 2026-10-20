@@ -20,8 +20,8 @@ I was a Research Engineer Intern at GenBio AI and a Research Assistant at Aalto 
 
 <h2 id="projects">Selected projects</h2>
 
-{% assign selected = site.portfolio | sort: 'order' %}
-{% for project in selected limit:4 %}
+{% assign selected = site.portfolio | where: "featured", true | sort: 'order' %}
+{% for project in selected %}
 {% include project-row.html %}
 {% endfor %}
 

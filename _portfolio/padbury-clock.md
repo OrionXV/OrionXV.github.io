@@ -1,6 +1,7 @@
 ---
 title: "Padbury Clock Revived"
 order: 20
+featured: true
 group: "software"
 metadata: "Open-source Contributions · Swift · 2026"
 summary: "Contributed macOS compatibility updates and a customizable footer to the upstream screensaver project."

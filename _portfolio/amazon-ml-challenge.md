@@ -1,6 +1,7 @@
 ---
 title: "Amazon ML Challenge: Product length prediction"
 order: 4
+featured: true
 group: "applied"
 metadata: "Team lead · Winner · 2023"
 summary: "Led our team in the challenge to predict product length from catalogue data. We won the 2023 competition."
