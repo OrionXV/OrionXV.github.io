@@ -29,7 +29,7 @@ With Prof. Yan Gong, I work on causal discovery and representation learning.
 
 ## Earlier research
 
-At Aalto University, I worked with Joongi Shin under the supervision of Antti Oulasvirta on generative UI and Bayesian optimization to model user preferences.
+At Aalto University, I worked with Dr. Joongi Shin under the supervision of Prof. Antti Oulasvirta on generative UI and Bayesian optimization to model user preferences.
 
 At GenBio AI, I worked on optimization skills and TTA strategies for Virtual Cell Harness and its agent workflows. [Experience →]({{ '/experience/' | relative_url }})
 

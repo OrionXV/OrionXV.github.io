@@ -10,7 +10,7 @@ description: "Syed Arsalaan Nadim. MSc student at MBZUAI working on graph diffus
 
 With Prof. Jian Kang, I work on **graph diffusion models** (molecular generation) and **causality** (causal discovery and representation learning with Prof. Yan Gong). With Prof. Raúl Astudillo, I work on **Bayesian optimization and multi-objective black-box optimization**.
 
-I was a Research Engineer Intern at GenBio AI and a Research Assistant at Aalto University, where I worked with Joongi Shin under the supervision of Antti Oulasvirta. Before MBZUAI, I worked in Technical Support & Research at ONGC Videsh. I studied Petroleum Engineering at IIT (ISM) Dhanbad.
+I was a Research Engineer Intern at GenBio AI and a Research Assistant at Aalto University, where I worked with Dr. Joongi Shin under the supervision of Prof. Antti Oulasvirta. Before MBZUAI, I worked in Technical Support & Research at ONGC Videsh. I studied Petroleum Engineering at IIT (ISM) Dhanbad.
 
 <h2 id="research-areas" class="compact-heading">Research areas</h2>
 
