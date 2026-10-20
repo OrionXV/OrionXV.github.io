@@ -3,14 +3,15 @@
   role: MSc Research · Statistics & Data Science · Abu Dhabi, UAE
   period: August 2025 – Present
   paragraphs:
-    - Graph diffusion models and molecule generation with Prof. Jian Kang.
+    - Graph diffusion models (molecular generation) with Prof. Jian Kang.
+    - Causality (causal discovery and representation learning) with Prof. Yan Gong.
     - Bayesian optimization and multi-objective black-box optimization with Prof. Raúl Astudillo.
 - id: aalto
   organization: Aalto University
   role: Research Assistant · Espoo, Finland
   period: June 2026 – August 2026
   paragraphs:
-    - Worked on generative UI and Bayesian optimization to model user preferences.
+    - Worked with Joongi Shin under the supervision of Antti Oulasvirta on generative UI and Bayesian optimization to model user preferences.
 - id: genbio
   organization: GenBio AI
   role: Research Engineer Intern · Virtual Cell Harness
