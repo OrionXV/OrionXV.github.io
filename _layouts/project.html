@@ -2,12 +2,17 @@
 layout: single
 ---
 <p class="project-detail-meta">{{ page.metadata }}</p>
+{% if page.authors %}<p class="project-authors">{{ page.authors }}</p>{% endif %}
+{% if page.image %}
 <figure class="project-figure">
   <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}" width="600" height="380">
 </figure>
+{% endif %}
 {{ content }}
+{% if page.project_url or page.report_url %}
 <p class="project-actions">
-  <a href="{{ page.project_url }}">View project <span aria-hidden="true">↗</span></a>
+  {% if page.project_url %}<a href="{{ page.project_url }}">View project <span aria-hidden="true">↗</span></a>{% endif %}
   {% if page.report_url %}<a href="{{ page.report_url }}">Technical report &amp; notes <span aria-hidden="true">↗</span></a>{% endif %}
 </p>
+{% endif %}
 <p class="back-link"><a href="{{ '/projects/' | relative_url }}">← All projects</a></p>

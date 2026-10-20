@@ -83,6 +83,9 @@ h1, h2, h3 { color: var(--ink); }
 .project-row { display: grid; grid-template-columns: 144px minmax(0, 1fr); gap: 24px; padding: 25px 0; border-bottom: 1px solid var(--line); }
 .project-row:first-child { padding-top: 0; }
 .project-thumb { display: block; align-self: start; margin-top: 4px; }
+.project-row.project-row--text { grid-template-columns: minmax(0, 1fr); }
+.page__content .project-authors { color: var(--muted); font-size: .8rem; line-height: 1.6; margin: 0 0 10px; }
+.page__content .project-authors strong { color: var(--teal); font-weight: 650; }
 .project-thumb img { display: block; width: 144px; height: 106px; object-fit: contain; background: #f1e9e0; border-radius: 4px; }
 .page__content .project-row h3 { font-size: 1.04rem; margin: 0 0 10px; }
 .project-row h3 a { text-decoration: none; color: var(--ink); }
