@@ -95,6 +95,8 @@ h1, h2, h3 { color: var(--ink); }
 .section-jump a { text-decoration: underline; }
 .project-figure { margin: 24px 0; padding: 22px; background: #f1e9e0; display: block; }
 .project-figure img { display: block; object-fit: contain; max-height: 360px; width: 100%; margin: 0; }
+.about-photo { display: block; margin: 0 0 30px; max-width: 300px; }
+.about-photo img { display: block; width: 100%; height: auto; border-radius: 4px; }
 .page__content .back-link { margin-top: 32px; font-size: .85rem; }
 .experience-entry { margin: 0 0 30px; padding: 0 0 28px; border-bottom: 1px solid var(--line); }
 .experience-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
