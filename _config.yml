@@ -3,7 +3,7 @@ site_theme: default
 title: Syed Arsalaan Nadim
 title_separator: "·"
 name: Syed Arsalaan Nadim
-description: "Sequential decision-making, causality, and agentic systems. MSc student in Statistics and Data Science at MBZUAI."
+description: "Causal inference, sequential decision-making, and agentic systems. MSc student in Statistics and Data Science at MBZUAI."
 url: "https://orionxv.github.io"
 baseurl: ""
 repository: "OrionXV/OrionXV.github.io"

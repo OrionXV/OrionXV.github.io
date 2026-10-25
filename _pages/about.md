@@ -6,9 +6,9 @@ description: "Syed Arsalaan Nadim. MSc student at MBZUAI working on graph diffus
 
 <p class="eyebrow">Statistics &amp; Data Science · MBZUAI</p>
 
-<p class="intro">I’m Arsalaan, an MSc student at MBZUAI. I work on sequential decision-making, causality, and agentic systems.</p>
+<p class="intro">I’m Arsalaan, an MSc student at MBZUAI. I work on causal inference, sequential decision-making, and agentic systems.</p>
 
-With Prof. Jian Kang, I work on **graph diffusion models** (molecular generation) and **causality** (causal discovery and representation learning with Prof. Yan Gong). With Prof. Raúl Astudillo, I work on **Bayesian optimization and multi-objective black-box optimization**.
+With Prof. Jian Kang, I work on **graph diffusion models** (molecular generation) and **causal inference** (causal discovery and causal representation learning with Prof. Yan Gong). With Prof. Raúl Astudillo, I work on **Bayesian optimization and multi-objective black-box optimization**.
 
 I was a Research Engineer Intern at GenBio AI and a Research Assistant at Aalto University, where I worked with Dr. Joongi Shin under the supervision of Prof. Antti Oulasvirta. Before MBZUAI, I worked in Technical Support & Research at ONGC Videsh. I studied Petroleum Engineering at IIT (ISM) Dhanbad.
 
@@ -38,4 +38,4 @@ I was a Research Engineer Intern at GenBio AI and a Research Assistant at Aalto 
 
 ## Elsewhere
 
-I enjoy reading and creative writing. I previously served as Editor-in-Chief for the SPE IIT(ISM) student chapter and on my school’s editorial board.
+I enjoy reading and creative writing. I previously served as Editor-in-Chief for the SPE IIT(ISM) student chapter and on my school’s editorial board. I am also the Academic Liaison for my M.Sc. cohort at MBZUAI.
