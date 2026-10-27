@@ -6,9 +6,9 @@ description: "Syed Arsalaan Nadim. MSc student at MBZUAI working on graph diffus
 
 <p class="eyebrow">Statistics &amp; Data Science · MBZUAI</p>
 
-<p class="intro">I’m Arsalaan, an MSc student at MBZUAI. I work on causal inference, sequential decision-making, and agentic systems.</p>
+<p class="intro">I’m Arsalaan, an MSc student at MBZUAI. I work on causal discovery and causal representation learning, sequential decision-making, and agentic systems.</p>
 
-With Prof. Jian Kang, I work on **graph diffusion models** (molecular generation) and **causal inference** (causal discovery and causal representation learning with Prof. Yan Gong). With Prof. Raúl Astudillo, I work on **Bayesian optimization and multi-objective black-box optimization**.
+With Prof. Jian Kang, I work on **graph diffusion models** (molecular generation) and **causal discovery and causal representation learning** with Prof. Yan Gong. With Prof. Raúl Astudillo, I work on **Bayesian optimization and multi-objective black-box optimization**.
 
 I was a Research Engineer Intern at GenBio AI and a Research Assistant at Aalto University, where I worked with Dr. Joongi Shin under the supervision of Prof. Antti Oulasvirta. Before MBZUAI, I worked in Technical Support & Research at ONGC Videsh. I studied Petroleum Engineering at IIT (ISM) Dhanbad.
 
@@ -25,13 +25,13 @@ I was a Research Engineer Intern at GenBio AI and a Research Assistant at Aalto 
 <h3>Research</h3>
 
 {% for project in selected %}{% if project.group == "research" %}
-{% include project-row.html %}
+{% include project-row.html show_summary=false %}
 {% endif %}{% endfor %}
 
 <h3>Open source contributions</h3>
 
 {% for project in selected %}{% if project.group == "software" %}
-{% include project-row.html %}
+{% include project-row.html show_summary=false %}
 {% endif %}{% endfor %}
 
 <p class="section-link"><a href="{{ '/projects/' | relative_url }}">All {{ site.portfolio.size }} projects <span aria-hidden="true">→</span></a></p>

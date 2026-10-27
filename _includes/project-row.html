@@ -8,7 +8,7 @@
     <p class="project-meta">{{ project.metadata }}</p>
     <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
     {% if project.authors %}<p class="project-authors">{{ project.authors }}</p>{% endif %}
-    <p>{{ project.summary }}</p>
+    {% unless include.show_summary == false %}<p>{{ project.summary }}</p>{% endunless %}
     {% if project.project_url or project.report_url %}<p class="project-actions">{% if project.project_url %}<a href="{{ project.project_url }}">View project <span aria-hidden="true">↗</span></a>{% endif %}{% if project.report_url %}<a href="{{ project.report_url }}">Report &amp; notes <span aria-hidden="true">↗</span></a>{% endif %}</p>{% endif %}
   </div>
 </article>
