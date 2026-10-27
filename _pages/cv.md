@@ -26,6 +26,18 @@ description: "Education, research experience, skills, awards, and leadership."
 
 [Work and research details →]({{ '/experience/' | relative_url }})
 
+## Open-source projects
+
+<div class="education-item">
+  <strong>Claude Opus Orchestrator with Haiku Subagents</strong>
+  <p class="project-meta">Open-source project · Python · 2026</p>
+</div>
+
+<div class="education-item">
+  <strong>Mental Calculator</strong>
+  <p class="project-meta">Open-source app · Rust · 2026</p>
+</div>
+
 <h2 id="skills">Tools</h2>
 
 **Languages:** Python, C/C++, Rust, JavaScript.
