@@ -23,7 +23,7 @@ With Prof. Jian Kang at MBZUAI, I work on graph diffusion models (molecular gene
 
 With Prof. Raúl Astudillo at MBZUAI, I work on Bayesian optimization and multi-objective black-box optimization.
 
-### Causal inference
+### Causal discovery and representation learning
 
 With Prof. Yan Gong, I work on causal discovery and causal representation learning.
 
